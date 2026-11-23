@@ -183,6 +183,7 @@ class StatsCounter {
 // Live Search Class
 class LiveSearch {
     constructor() {
+        if (window.NovoSearch) return;
         this.form = document.getElementById('searchForm');
         this.input = document.getElementById('searchInput');
         this.dropdown = document.getElementById('searchDropdown');

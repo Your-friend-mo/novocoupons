@@ -229,13 +229,17 @@
             <a class="navbar-brand p-0 flex-shrink-0" href="../index.html">
               <img src="../assets_mirror/public/assets/uploads/logo_lights/logo_light_69b5e1f4bea2f.png" alt="NovoCoupons Logo" height="28">
             </a>
-            <form class="d-flex position-relative flex-grow-1" action="../index.html" method="get">
+            <form class="d-flex position-relative flex-grow-1" role="search" id="searchForm" autocomplete="off">
               <div class="input-group">
-                <input type="search" class="form-control header-search text-third rounded-3 bg-secondary border border-subtle" placeholder="Search verified promo deals & coupons" value="verified promo deals" autocomplete="off">
+                <input type="search" class="form-control header-search text-third rounded-3 bg-secondary border border-subtle" placeholder="Search coupons &amp; brands" aria-label="Search coupons &amp; brands" id="searchInput" autocomplete="off">
                 <span class="search-loader position-absolute end-0 top-50 translate-middle-y pe-sm-3 pe-2">
                   <i class="bi bi-search"></i>
+                  <div class="spinner-border spinner-border-sm accent d-none" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
                 </span>
               </div>
+              <div class="search-dropdown" id="searchDropdown"></div>
             </form>
           </div>
         </div>
@@ -487,5 +491,6 @@
         </div>
       </div>
     </footer>
+  <script src="../assets_mirror/assets/front/js/novo-search.js"></script>
 </body>
 </html>
