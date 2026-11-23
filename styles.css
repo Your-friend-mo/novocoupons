@@ -1,0 +1,1638 @@
+/* ==========================================================================
+   NovoCoupons Clone — Exact Theme Tokens & Layout Styles
+   ========================================================================== */
+
+:root,
+[data-bs-theme="dark"] {
+  --background: #1a2632;
+  --background-secondary: #111c26;
+  --accent: #01c0ff;
+  --primary: #0088cc;
+  --text: #e0f4ff;
+  --text-second: #a3d5eb;
+  --text-third: #6798b4;
+  --success-color: #4bb543;
+  --warning-color: #ffd500;
+  --danger-color: #ff4d6d;
+
+  --accent-lightest: color-mix(in srgb, var(--accent) 25%, white);
+  --accent-lighter: color-mix(in srgb, var(--accent) 50%, white);
+  --background-secondary-lightest: color-mix(in srgb, var(--background-secondary) 90%, white);
+  --border-subtle: color-mix(in srgb, var(--background) 95%, white);
+  --border-light: color-mix(in srgb, var(--background) 90%, white);
+  --border-base: color-mix(in srgb, var(--background) 85%, white);
+  --border-strong: color-mix(in srgb, var(--background) 80%, white);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.25);
+  --shadow-dropdown: 0 14px 36px rgba(0, 0, 0, 0.45);
+  --dot-grid-color: rgba(224, 244, 255, 0.08);
+  --modal-backdrop: rgba(8, 14, 20, 0.72);
+}
+
+[data-bs-theme="light"] {
+  --background: #f8fbfd;
+  --background-secondary: #f0f7fc;
+  --accent: #01c0ff;
+  --primary: #0088cc;
+  --text: #2b3845;
+  --text-second: #5d7185;
+  --text-third: #8fa3b7;
+
+  --accent-lightest: color-mix(in srgb, var(--accent) 20%, white);
+  --accent-lighter: color-mix(in srgb, var(--accent) 55%, #006699);
+  --background-secondary-lightest: rgba(255, 255, 255, 0.88);
+  --border-subtle: color-mix(in srgb, var(--background) 94%, black);
+  --border-light: color-mix(in srgb, var(--background) 90%, black);
+  --border-base: color-mix(in srgb, var(--background) 85%, black);
+  --border-strong: color-mix(in srgb, var(--background) 80%, black);
+  --shadow-card: 0 6px 18px rgba(17, 28, 38, 0.06);
+  --shadow-dropdown: 0 14px 34px rgba(17, 28, 38, 0.14);
+  --dot-grid-color: rgba(43, 56, 69, 0.1);
+  --modal-backdrop: rgba(17, 28, 38, 0.55);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Custom thin scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-third);
+}
+
+/* ==========================================================================
+   Layout Container
+   ========================================================================== */
+.container-2xl {
+  width: 100%;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* ==========================================================================
+   Header / Navbar
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  height: 64px;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Stacked NOVO / COUPONS Logo */
+.brand-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.brand-wordmark .word-novo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.brand-wordmark .word-coupons {
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  margin-top: 2px;
+  color: var(--text);
+}
+
+.brand-wordmark.logo-lg .word-novo {
+  font-size: 1.65rem;
+}
+.brand-wordmark.logo-lg .word-coupons {
+  font-size: 0.65rem;
+}
+
+/* Header Search */
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+}
+
+.search-input-group {
+  position: relative;
+  width: 100%;
+}
+
+.header-search {
+  width: 100%;
+  height: 40px;
+  padding: 0 2.5rem 0 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--background);
+  border: 1px solid var(--border-subtle);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+[data-bs-theme="dark"] .header-search {
+  background-color: var(--background-secondary);
+  border-color: var(--border-light);
+}
+
+[data-bs-theme="light"] .header-search {
+  background-color: var(--background-secondary);
+  border-color: var(--border-light);
+}
+
+.header-search::placeholder {
+  color: var(--text-third);
+}
+
+.header-search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.search-icon-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Live Search Dropdown */
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-dropdown);
+  overflow: hidden;
+  z-index: 1050;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+.search-dropdown.hidden {
+  display: none;
+}
+
+.search-section {
+  padding: 0.75rem 0;
+}
+
+.search-section + .search-section {
+  border-top: 1px solid var(--border-light);
+}
+
+.search-section-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-third);
+  padding: 0 1rem 0.5rem;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.search-item:hover {
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.search-brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 0.45rem;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border-light);
+}
+
+.search-item-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.search-item-sub {
+  font-size: 0.75rem;
+  color: var(--text-third);
+  margin-top: 2px;
+}
+
+.search-empty {
+  padding: 1.25rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-third);
+}
+
+/* Theme Toggle */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  background-color: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* ==========================================================================
+   Main Section & Grid
+   ========================================================================== */
+.main-content {
+  padding-top: 2.25rem;
+  padding-bottom: 3rem;
+  min-height: calc(100vh - 64px - 320px);
+}
+
+.section-heading {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin: 0 0 1.5rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.coupons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+@media (max-width: 1199px) {
+  .coupons-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .coupons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+  .header-search {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coupons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Coupon Card
+   ========================================================================== */
+.coupon-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  border: 1px solid var(--border-light);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-card);
+}
+
+.coupon-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border-light));
+}
+
+.card-banner {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  background-color: var(--background-secondary);
+  overflow: visible;
+}
+
+.card-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rating-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--background-secondary-lightest);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.rating-badge svg {
+  color: var(--accent);
+}
+
+.coupon-type-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.22rem 0.7rem;
+  border-radius: 0.4rem;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(1, 192, 255, 0.35);
+}
+
+.brand-logo-wrapper {
+  position: absolute;
+  left: 0.9rem;
+  bottom: -16px;
+  width: 68px;
+  height: 68px;
+  border-radius: 0.75rem;
+  background-color: var(--background);
+  border: 2px solid var(--border-light);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+  z-index: 2;
+}
+
+.brand-logo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 1.75rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 0.2rem;
+  color: var(--text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-brand-link {
+  font-size: 0.85rem;
+  color: var(--text-third);
+  margin-bottom: 1.1rem;
+  display: inline-block;
+  width: fit-content;
+  transition: color 0.15s ease;
+}
+
+.card-brand-link:hover {
+  color: var(--accent);
+}
+
+/* Ticket-notched Incentive Box */
+.coupon-incentive-inner {
+  position: relative;
+  background-color: var(--background-secondary);
+  border-radius: 0.65rem;
+  padding: 1.25rem 1.15rem;
+  text-align: center;
+  margin-bottom: 1.15rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 112px;
+  transition: transform 0.2s ease;
+}
+
+.coupon-card:hover .coupon-incentive-inner {
+  transform: scale(1.015);
+}
+
+.incentive-circle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--background);
+}
+
+.incentive-circle.start {
+  left: -10px;
+}
+
+.incentive-circle.end {
+  right: -10px;
+}
+
+.incentive-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.45rem;
+  line-height: 1.2;
+}
+
+[data-bs-theme="dark"] .incentive-text {
+  color: var(--accent);
+}
+
+.short-description-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+/* Remaining Coupons Pill */
+.coupons-remaining-wrapper {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--accent-lightest);
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.3rem 0.95rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.coupons-remaining-wrapper svg {
+  flex-shrink: 0;
+}
+
+/* Primary Cyan Button */
+.btn-get-code {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.62rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.btn-get-code:hover {
+  background-color: #00ace6;
+  box-shadow: 0 4px 14px rgba(1, 192, 255, 0.35);
+}
+
+.btn-get-code:active {
+  transform: scale(0.985);
+}
+
+/* Card Footer Strip */
+.card-footer-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.8rem;
+  color: var(--text-third);
+}
+
+.card-footer-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.card-footer-item svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+.pagination-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  background-color: var(--background-secondary);
+  color: var(--accent-lighter);
+  font-size: 0.82rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.page-btn:hover:not(:disabled):not(.active) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.page-btn.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.page-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.1fr 1.05fr;
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+@media (max-width: 991px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.footer-blurb {
+  margin: 1.1rem 0 2rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-third);
+  max-width: 380px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--text-third);
+  color: var(--text-second);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.social-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.footer-title {
+  position: relative;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 1.6rem;
+  padding-bottom: 0.55rem;
+  color: var(--text);
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.popular-brands-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.popular-brand-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--background) 65%, var(--background-secondary));
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.popular-brand-card:hover {
+  border-color: var(--accent);
+  transform: translateX(3px);
+}
+
+.popular-brand-thumb {
+  width: 42px;
+  height: 42px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.popular-brand-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.popular-brand-count {
+  font-size: 0.8rem;
+  color: var(--text-third);
+  margin-top: 2px;
+}
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.why-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--background) 70%, var(--background-secondary));
+  border: 1px solid var(--border-subtle);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.why-heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: var(--text);
+}
+
+.why-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-third);
+  margin: 0;
+}
+
+.copyright-bar {
+  border-top: 1px solid var(--border-light);
+  padding: 1.25rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-third);
+}
+
+/* ==========================================================================
+   Brand Detail Page
+   ========================================================================== */
+.brand-page-layout {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 2.25rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .brand-page-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.brand-sidebar {
+  position: sticky;
+  top: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+@media (max-width: 1024px) {
+  .brand-sidebar {
+    position: static;
+  }
+}
+
+.brand-info-card,
+.brand-stat-card,
+.brand-rating-card,
+.brand-tips-card {
+  background-color: color-mix(in srgb, var(--background-secondary) 55%, var(--background));
+  border: 1px solid var(--border-light);
+  border-radius: 0.9rem;
+  padding: 1.4rem;
+}
+
+.brand-info-card {
+  text-align: center;
+}
+
+.brand-detail-logo {
+  width: 92px;
+  height: 92px;
+  border-radius: 1rem;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  border: 2px solid var(--border-light);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.brand-detail-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-detail-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin: 0 0 0.85rem;
+  color: var(--text);
+}
+
+.brand-detail-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-second);
+  text-align: left;
+  margin: 0;
+}
+
+.brand-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.brand-stat-card {
+  padding: 1rem 0.6rem;
+  text-align: center;
+}
+
+.brand-stat-card svg {
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+
+.brand-stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.brand-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-third);
+  margin-top: 2px;
+}
+
+.brand-rating-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.3rem;
+}
+
+.star-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  padding: 2px;
+  color: var(--text-third);
+  display: flex;
+  transition: color 0.15s ease, transform 0.12s ease;
+}
+
+.star-btn:hover,
+.star-btn.filled {
+  color: var(--accent);
+}
+
+.star-btn:hover {
+  transform: scale(1.15);
+}
+
+.rating-summary-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.rating-summary-text span {
+  font-weight: 400;
+  color: var(--text-third);
+}
+
+.brand-tips-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.85rem;
+  color: var(--text);
+}
+
+.brand-tips-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--text-second);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.brand-tips-list li + li {
+  margin-top: 0.45rem;
+}
+
+/* Right Column: Available Coupons */
+.brand-coupons-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.brand-coupons-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.results-count {
+  font-size: 0.9rem;
+  color: var(--text-third);
+}
+
+.coupon-rows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.coupon-row {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr) 170px 185px;
+  align-items: center;
+  background-color: var(--background);
+  border: 1px solid var(--border-light);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.coupon-row:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border-light));
+}
+
+@media (max-width: 820px) {
+  .coupon-row {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+.coupon-row-ticket {
+  position: relative;
+  margin: 1rem;
+  padding: 1rem 0.75rem;
+  border-radius: 0.55rem;
+  background-color: var(--background-secondary);
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.coupon-row-ticket .incentive-circle {
+  width: 14px;
+  height: 14px;
+}
+.coupon-row-ticket .incentive-circle.start {
+  left: -7px;
+}
+.coupon-row-ticket .incentive-circle.end {
+  right: -7px;
+}
+
+.coupon-row-info {
+  padding: 1rem 0.75rem;
+}
+
+.coupon-row-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  color: var(--text);
+}
+
+.coupon-row-desc {
+  font-size: 0.84rem;
+  color: var(--text-second);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.coupon-row-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-third);
+}
+
+.coupon-row-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.coupon-row-meta-item svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.coupon-row-cta {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background-image: radial-gradient(var(--dot-grid-color) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+}
+
+.back-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.back-home-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Coupon Modal (3-Stage Reveal Flow)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: var(--modal-backdrop);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.coupon-modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  background-color: var(--background);
+  border: 1px solid var(--border-light);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 0.22s ease;
+}
+
+.modal-overlay.open .coupon-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Modal Blurred Banner Header */
+.modal-header-banner {
+  position: relative;
+  padding: 1.35rem 1.5rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.modal-header-bg {
+  position: absolute;
+  inset: -12px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px) brightness(0.45);
+  z-index: 0;
+}
+
+.modal-header-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17, 28, 38, 0.45) 0%, rgba(17, 28, 38, 0.88) 100%);
+  z-index: 1;
+}
+
+.modal-header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.modal-brand-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 0.65rem;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.modal-brand-name {
+  font-size: 0.82rem;
+  color: rgba(224, 244, 255, 0.8);
+}
+
+.modal-coupon-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0.1rem 0 0.4rem;
+}
+
+.modal-header-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.modal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(4px);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.modal-close-btn {
+  position: relative;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(17, 28, 38, 0.55);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease;
+}
+
+.modal-close-btn:hover {
+  background-color: rgba(1, 192, 255, 0.2);
+}
+
+/* Modal Body */
+.modal-body-scroll {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Stage 1: Incentive Banner */
+.modal-incentive-banner {
+  position: relative;
+  max-width: 340px;
+  margin: 0 auto 1.5rem;
+  padding: 1.15rem 1.4rem;
+  border-radius: 0.75rem;
+  background-color: var(--accent-lightest);
+  text-align: center;
+}
+
+.modal-incentive-banner .incentive-circle {
+  background-color: var(--background);
+}
+
+.modal-incentive-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+[data-bs-theme="light"] .modal-incentive-title {
+  color: var(--primary);
+}
+
+.modal-incentive-sub {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111c26;
+}
+
+.modal-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-bottom: 1.35rem;
+  margin-bottom: 1.35rem;
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.modal-stat-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.modal-stat-top svg {
+  color: var(--accent);
+}
+
+.modal-stat-sub {
+  font-size: 0.78rem;
+  color: var(--text-third);
+  margin-top: 3px;
+}
+
+.modal-details-heading {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-second);
+  margin: 0 0 0.75rem;
+}
+
+.modal-details-lead {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 1rem;
+}
+
+.modal-features-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.6rem;
+}
+
+.modal-features-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--text-second);
+}
+
+/* Modal Footer (Stage 1 Peel-Away Button) */
+.modal-footer-bar {
+  padding: 1.15rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+  background-color: var(--background-secondary);
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.peel-code-wrapper {
+  position: relative;
+  width: 270px;
+  height: 48px;
+  border-radius: 0.6rem;
+  border: 1.5px dashed var(--accent);
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.9rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.peel-code-hint {
+  font-family: monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  user-select: none;
+}
+
+.modal-btn-reveal {
+  position: absolute;
+  inset: 0;
+  width: 86%;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.25s ease, background-color 0.15s ease;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.peel-code-wrapper:hover .modal-btn-reveal {
+  width: 78%;
+  background-color: #00ace6;
+}
+
+/* Stage 2: Validation Circular Progress */
+.modal-stage-validating {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.progress-ring-wrap {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 1.35rem;
+}
+
+.progress-ring-svg {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-track {
+  fill: none;
+  stroke: var(--border-light);
+  stroke-width: 7;
+}
+
+.progress-ring-bar {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 7;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.12s linear, stroke 0.2s ease;
+}
+
+.progress-ring-bar.valid {
+  stroke: var(--success-color);
+}
+
+.progress-ring-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.validating-status {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.35rem;
+}
+
+.validating-sub {
+  font-size: 0.85rem;
+  color: var(--text-third);
+  margin: 0;
+}
+
+/* Stage 3: Ready / Locked Code */
+.modal-stage-ready {
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.ready-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.45rem;
+  color: var(--text);
+}
+
+.ready-sub {
+  font-size: 0.88rem;
+  color: var(--text-third);
+  margin: 0 0 1.75rem;
+}
+
+.locked-code-box {
+  position: relative;
+  max-width: 440px;
+  margin: 0 auto 1.5rem;
+  padding: 1.5rem 1.25rem;
+  border: 1.5px dashed var(--text-second);
+  border-radius: 0.85rem;
+  background-color: var(--background-secondary);
+}
+
+.locked-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-third);
+}
+
+.lock-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background-color: var(--background);
+  border: 1px solid var(--border-light);
+  color: var(--text-second);
+  font-size: 0.68rem;
+}
+
+.lock-status-pill.unlocked {
+  background-color: color-mix(in srgb, var(--success-color) 18%, transparent);
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.code-display-value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  transition: filter 0.3s ease;
+  word-break: break-all;
+}
+
+.code-display-value.blurred {
+  filter: blur(6px);
+  user-select: none;
+}
+
+.ready-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.72rem 1.8rem;
+  border-radius: 0.55rem;
+  border: none;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.15s ease, transform 0.12s ease;
+}
+
+.ready-action-btn:hover {
+  background-color: #00ace6;
+}
+
+.ready-action-btn.copied {
+  background-color: var(--success-color);
+}
+
+/* Rate this coupon footer */
+.modal-rate-footer {
+  padding: 1.1rem 1.5rem 1.35rem;
+  border-top: 1px solid var(--border-light);
+  background-color: var(--background-secondary);
+  text-align: center;
+}
+
+.rate-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-second);
+  margin-bottom: 0.65rem;
+}
+
+.rate-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.rate-thumb-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  background-color: var(--background);
+  color: var(--text-third);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.rate-thumb-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.rate-thumb-btn.active-up {
+  border-color: var(--success-color);
+  color: var(--success-color);
+  background-color: color-mix(in srgb, var(--success-color) 14%, transparent);
+}
+
+.rate-thumb-btn.active-down {
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+  background-color: color-mix(in srgb, var(--danger-color) 14%, transparent);
+}
+
+.rate-feedback-msg {
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-top: 0.55rem;
+  min-height: 1.1em;
+}
+
+.hidden {
+  display: none !important;
+}

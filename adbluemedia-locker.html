@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unlock Your Coupon Code | NovoCoupons</title>
+  <meta name="description" content="Complete quick human verification to unlock your full verified coupon code. Access 100% free discount vouchers, game keys, and gift codes on NovoCoupons." />
+  <link rel="canonical" href="https://novocoupons.com/adbluemedia-locker.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- AdBlueMedia Custom Locker Styling - NovoCoupons Dark Theme -->
+  <style>
+    :root {
+      --nc-bg: #1a2632;
+      --nc-bg-secondary: #111c26;
+      --nc-accent: #01c0ff;
+      --nc-primary: #0088cc;
+      --nc-text: #e0f4ff;
+      --nc-text-second: #a3d5eb;
+      --nc-text-third: #6798b4;
+      --nc-border: rgba(224, 244, 255, 0.12);
+      --nc-border-light: rgba(224, 244, 255, 0.08);
+      --nc-card: #15202c;
+      --nc-card-inner: #0d161f;
+      --nc-success: #4bb543;
+      --nc-radius: 1rem;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(1, 192, 255, 0.14), transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(0, 136, 204, 0.12), transparent 45%),
+        var(--nc-bg);
+      color: var(--nc-text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nc-locker-backdrop {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .nc-locker-card {
+      background: var(--nc-card);
+      border: 1px solid var(--nc-border);
+      border-radius: 1.25rem;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      overflow: hidden;
+      animation: ncFadeUp 0.35s ease-out;
+    }
+
+    @keyframes ncFadeUp {
+      from { opacity: 0; transform: translateY(14px) scale(0.98); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .nc-locker-header {
+      background: linear-gradient(180deg, var(--nc-bg-secondary) 0%, rgba(17, 28, 38, 0.85) 100%);
+      padding: 22px 24px 18px;
+      border-bottom: 1px solid var(--nc-border);
+      text-align: center;
+    }
+
+    .nc-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .nc-brand-wordmark {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .nc-brand-wordmark .word-novo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--nc-accent);
+    }
+
+    .nc-brand-wordmark .word-coupons {
+      font-size: 0.54rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      margin-top: 2px;
+      color: var(--nc-text);
+    }
+
+    .nc-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nc-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(224, 244, 255, 0.1);
+      color: var(--nc-text);
+      border: 1px solid var(--nc-border);
+    }
+
+    .nc-pill-verified {
+      background: rgba(1, 192, 255, 0.16);
+      color: var(--nc-accent);
+      border-color: rgba(1, 192, 255, 0.35);
+    }
+
+    .nc-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .nc-subtitle {
+      font-size: 0.86rem;
+      color: var(--nc-text-second);
+    }
+
+    .nc-locker-body {
+      padding: 22px 24px;
+    }
+
+    .nc-ticket {
+      position: relative;
+      background: var(--nc-card-inner);
+      border: 1.5px dashed var(--nc-accent);
+      border-radius: 12px;
+      padding: 14px 18px;
+      text-align: center;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .nc-ticket::before,
+    .nc-ticket::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      background: var(--nc-card);
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nc-ticket::before { left: -9px; }
+    .nc-ticket::after { right: -9px; }
+
+    .nc-ticket-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--nc-text-third);
+      margin-bottom: 6px;
+    }
+
+    .nc-code-preview {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--nc-accent);
+    }
+
+    .nc-code-blur {
+      filter: blur(5px);
+      user-select: none;
+      color: var(--nc-text-second);
+    }
+
+    .nc-step-note {
+      font-size: 13.5px;
+      color: var(--nc-text-second);
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .nc-step-note strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .nc-progress-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--nc-card-inner);
+      border: 1px solid var(--nc-border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--nc-text);
+    }
+
+    .nc-progress-steps {
+      display: flex;
+      gap: 6px;
+    }
+
+    .nc-step-dot {
+      width: 28px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(224, 244, 255, 0.15);
+      transition: background 0.25s ease;
+    }
+
+    .nc-step-dot.done {
+      background: var(--nc-success);
+    }
+
+    .nc-offers-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .nc-offer-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      text-decoration: none;
+      background: var(--nc-card-inner);
+      border: 1px solid var(--nc-border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      color: var(--nc-text);
+      transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+      cursor: pointer;
+    }
+
+    .nc-offer-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--nc-accent);
+      background: rgba(1, 192, 255, 0.08);
+    }
+
+    .nc-offer-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .nc-offer-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: var(--nc-bg-secondary);
+      border: 1px solid var(--nc-border);
+      flex-shrink: 0;
+    }
+
+    .nc-offer-info {
+      min-width: 0;
+      text-align: left;
+    }
+
+    .nc-offer-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nc-offer-desc {
+      font-size: 12px;
+      color: var(--nc-text-second);
+      line-height: 1.3;
+    }
+
+    .nc-offer-cta {
+      flex-shrink: 0;
+      background: var(--nc-accent);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+      border: none;
+      transition: background 0.16s ease;
+    }
+
+    .nc-offer-btn:hover .nc-offer-cta {
+      background: var(--nc-primary);
+    }
+
+    .nc-status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      background: var(--nc-card-inner);
+      border: 1px solid var(--nc-border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      color: var(--nc-text-second);
+      font-weight: 500;
+    }
+
+    .nc-pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--nc-accent);
+      position: relative;
+    }
+
+    .nc-pulse-dot::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid var(--nc-accent);
+      animation: ncPulse 1.5s infinite ease-out;
+    }
+
+    @keyframes ncPulse {
+      0%   { transform: scale(0.7); opacity: 0.9; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    .nc-unlocked-box {
+      display: none;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .nc-unlocked-box.show {
+      display: block;
+    }
+
+    .nc-unlocked-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(75, 181, 67, 0.16);
+      color: var(--nc-success);
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(75, 181, 67, 0.3);
+      margin-bottom: 14px;
+    }
+
+    .nc-full-code {
+      background: var(--nc-card-inner);
+      border: 2px dashed var(--nc-accent);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--nc-accent);
+      margin-bottom: 14px;
+      word-break: break-all;
+    }
+
+    .nc-copy-btn {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 13px 18px;
+      background: var(--nc-accent);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.16s ease;
+      box-shadow: 0 8px 20px rgba(1, 192, 255, 0.28);
+    }
+
+    .nc-copy-btn:hover { background: var(--nc-primary); }
+    .nc-copy-btn.copied { background: var(--nc-success); }
+
+    .nc-locker-footer {
+      border-top: 1px solid var(--nc-border);
+      background: var(--nc-bg-secondary);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 11.5px;
+      color: var(--nc-text-third);
+    }
+
+    .nc-trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nc-trust-item svg { color: var(--nc-accent); }
+  </style>
+</head>
+<body>
+
+  <div class="nc-locker-backdrop">
+    <div class="nc-locker-card">
+      <!-- Header -->
+      <div class="nc-locker-header">
+        <div class="nc-header-top">
+          <a href="./index.html" class="nc-brand-wordmark" aria-label="NovoCoupons">
+            <span class="word-novo">NOVO</span>
+            <span class="word-coupons">COUPONS</span>
+          </a>
+          <div class="nc-badges">
+            <span class="nc-pill nc-pill-verified">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Verified
+            </span>
+            <span class="nc-pill">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
+              <span id="nc-coupons-left">340</span> left
+            </span>
+          </div>
+        </div>
+        <h1 class="nc-title" id="nc-locker-title">Human Verification Required</h1>
+        <p class="nc-subtitle">Instant automatic unlock after completing 2 simple offers</p>
+      </div>
+
+      <!-- Body -->
+      <div class="nc-locker-body">
+        <!-- Ticket Box -->
+        <div class="nc-ticket">
+          <div class="nc-ticket-label" id="nc-ticket-label">Your Reserved Code</div>
+          <div class="nc-code-preview" id="nc-code-preview">
+            <span class="nc-code-blur">PROMO-N54PY-</span><span id="nc-code-tail">CD8AP</span>
+          </div>
+        </div>
+
+        <!-- Locked View (Offers + 0/2 Progress) -->
+        <div id="nc-locked-view">
+          <p class="nc-step-note">
+            Complete <strong>2 quick free offers</strong> below to verify you're human and reveal your full code immediately.
+          </p>
+
+          <div class="nc-progress-wrap">
+            <span id="nc-progress-text">0 / 2 Offers Completed</span>
+            <div class="nc-progress-steps">
+              <span class="nc-step-dot" id="nc-dot-1"></span>
+              <span class="nc-step-dot" id="nc-dot-2"></span>
+            </div>
+          </div>
+
+          <!-- Dynamic Offers List loaded from AdBlueMedia feed -->
+          <div class="nc-offers-list" id="nc-offers-container">
+            <!-- AdBlueMedia placeholder tag support -->
+            {offers}
+          </div>
+
+          <div class="nc-status-bar">
+            <span class="nc-pulse-dot"></span>
+            <span>Waiting for offer completion... (automatic detection)</span>
+          </div>
+        </div>
+
+        <!-- Unlocked View (Shown after 2 verified offers) -->
+        <div id="nc-unlocked-view" class="nc-unlocked-box">
+          <div class="nc-unlocked-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Verification Complete! Code Unlocked
+          </div>
+          <div class="nc-full-code" id="nc-revealed-code">PROMO-N54PY-CD8AP</div>
+          <button type="button" class="nc-copy-btn" id="nc-copy-code-btn">Copy Full Code</button>
+        </div>
+      </div>
+
+      <!-- Footer Trust Strip -->
+      <div class="nc-locker-footer">
+        <span class="nc-trust-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+          256-Bit SSL Encrypted
+        </span>
+        <span class="nc-trust-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Instant Delivery
+        </span>
+        <span class="nc-trust-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.739-8-4.585 0-4.585 8 0 8 5.606 0 7.644-8 12.74-8z"/></svg>
+          No Expiration
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AdBlueMedia Feed Fetch & Locker Logic -->
+  <script>
+    (function () {
+      const USER_ID = "831501";
+      const API_KEY_OFFERS = "4a1d7b7a9f26dbe08fc3a0b059296411";
+      const FEED_URL = `https://dtvpp42hfuyb2.cloudfront.net/public/offers/feed.php?user_id=${USER_ID}&api_key=${API_KEY_OFFERS}&s1=&s2=`;
+
+      const params = new URLSearchParams(window.location.search);
+      const couponTitle = params.get("title") || "Special Coupon";
+      const fullCode = params.get("code") || "PROMO-N54PY-CD8AP";
+      const tail = fullCode.slice(-4) || "8F2N";
+
+      document.getElementById("nc-code-tail").textContent = tail;
+      document.getElementById("nc-revealed-code").textContent = fullCode;
+      if (params.get("title")) {
+        document.getElementById("nc-ticket-label").textContent = couponTitle;
+      }
+
+      let completedCount = 0;
+      const targetCount = 2;
+
+      function updateProgressUI() {
+        document.getElementById("nc-progress-text").textContent = `${completedCount} / ${targetCount} Offers Completed`;
+        if (completedCount >= 1) document.getElementById("nc-dot-1").classList.add("done");
+        if (completedCount >= 2) document.getElementById("nc-dot-2").classList.add("done");
+
+        if (completedCount >= targetCount) {
+          setTimeout(() => {
+            document.getElementById("nc-locked-view").style.display = "none";
+            document.getElementById("nc-unlocked-view").classList.add("show");
+            document.getElementById("nc-code-preview").innerHTML = `<span style="color:var(--nc-success);">${fullCode}</span>`;
+          }, 600);
+        }
+      }
+
+      function handleOfferClick(offerUrl) {
+        window.open(offerUrl, "_blank");
+        completedCount = Math.min(targetCount, completedCount + 1);
+        updateProgressUI();
+      }
+
+      // Fallback offers in case network is offline
+      const fallbackOffers = [
+        {
+          name: "Ball Catcher",
+          conversion: "Complete the quick survey",
+          url: "https://send.appntrckrt.com/?user_id=831501&o=1",
+          network_icon: "https://cdn.affise.com/affise-media-service-prod/offers/959/33079"
+        },
+        {
+          name: "Survey Rewards",
+          conversion: "Answer 3 simple questions",
+          url: "https://send.appntrckrt.com/?user_id=831501&o=2",
+          network_icon: "https://novocoupons.com/public/assets/uploads/favicons/favicon_69b5ed9b3e46b.png"
+        },
+        {
+          name: "Mobile App Access",
+          conversion: "Install and run for 30 seconds",
+          url: "https://send.appntrckrt.com/?user_id=831501&o=3",
+          network_icon: "https://novocoupons.com/public/assets/uploads/favicons/favicon_69b5ed9b3e46b.png"
+        }
+      ];
+
+      function renderOffers(offers) {
+        const container = document.getElementById("nc-offers-container");
+        if (!container) return;
+
+        // If AdBlueMedia already replaced {offers} with raw links
+        if (container.children.length > 0 && !container.innerHTML.includes("{offers}")) {
+          return;
+        }
+
+        const validOffers = Array.isArray(offers) && offers.length > 0 ? offers.slice(0, 5) : fallbackOffers;
+        container.innerHTML = validOffers
+          .map((off, idx) => {
+            const icon = off.network_icon || "assets_mirror/public/assets/uploads/favicons/favicon_69b5ed9b3e46b.png";
+            const name = off.name || `Special Offer #${idx + 1}`;
+            const desc = off.conversion || off.anchor || "Complete free offer to unlock code";
+            const targetUrl = off.url || (off.url_domain ? `https://${off.url_domain}/?user_id=${USER_ID}&id=${off.id}` : "#");
+
+            return `
+              <div class="nc-offer-btn" onclick="window.__ncHandleOffer('${targetUrl}')">
+                <div class="nc-offer-left">
+                  <img src="${icon}" class="nc-offer-icon" onerror="this.src='assets_mirror/public/assets/uploads/favicons/favicon_69b5ed9b3e46b.png'" alt="Offer Icon" />
+                  <div class="nc-offer-info">
+                    <div class="nc-offer-name">${name}</div>
+                    <div class="nc-offer-desc">${desc}</div>
+                  </div>
+                </div>
+                <button type="button" class="nc-offer-cta">Start Free</button>
+              </div>
+            `;
+          })
+          .join("");
+      }
+
+      window.__ncHandleOffer = handleOfferClick;
+
+      // Fetch live AdBlueMedia offer feed
+      fetch(FEED_URL)
+        .then((res) => {
+          if (!res.ok) throw new Error("Feed fetch error");
+          return res.json();
+        })
+        .then((data) => renderOffers(data))
+        .catch(() => renderOffers(fallbackOffers));
+
+      // Copy code button
+      document.getElementById("nc-copy-code-btn").addEventListener("click", function () {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(fullCode).catch(() => {});
+        }
+        this.textContent = "Copied to Clipboard!";
+        this.classList.add("copied");
+        setTimeout(() => {
+          this.textContent = "Copy Full Code";
+          this.classList.remove("copied");
+        }, 2200);
+      });
+    })();
+  </script>
+</body>
+</html>
