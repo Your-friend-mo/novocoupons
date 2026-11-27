@@ -28,5 +28,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://novocoupons.com/sitemap.xml
-Sitemap: https://novocoupons.com/sitemap.txt
+Sitemap: https://novocoupons.comee.online/sitemap.xml

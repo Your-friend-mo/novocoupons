@@ -1,21 +1,18 @@
-# NovoCoupons - Verified Promo Codes & Hand-Tested Discount Vouchers
-> Official digital directory for authentic promotional vouchers, gaming keys, gift cards, and online discounts.
+# NovoCoupons
+> NovoCoupons is a verified coupon code directory for gaming, apps, and digital products. All codes are hand-tested daily with a 99.4% success rate. Save an average of $38.50 per order.
 
-## Core Hub Pages
-- [Home (novocoupons)](https://novocoupons.com/)
-- [novocoupons.com Hub](https://novocoupons.com/novocoupons.com.html)
-- [novocoupons.con Deals](https://novocoupons.com/novocoupons.con.html)
-- [novocoupon Savings](https://novocoupons.com/novocoupon.html)
-- [novocoupons com](https://novocoupons.com/novocoupons-com.html)
-- [https novocoupons com](https://novocoupons.com/https-novocoupons-com.html)
-- [novocoupon com](https://novocoupons.com/novocoupon-com.html)
-- [novocoupon.com](https://novocoupons.com/novocoupon.com.html)
+## Key Pages
+- [Home](https://novocoupons.comee.online/): Browse all verified coupon deals on NovoCoupons
+- [Gaming Coupons](https://novocoupons.comee.online/gaming-coupons.html): Verified gaming promo codes for Fortnite, Roblox, Valorant, Minecraft, and more
+- [Apps & Software Coupons](https://novocoupons.comee.online/apps-software-coupons.html): Verified promo codes for ChatGPT Plus, Claude Pro, and digital apps
+- [Top Verified Deals](https://novocoupons.comee.online/top-verified-deals.html): The most popular verified coupon deals for 2026
+- [How It Works](https://novocoupons.comee.online/how-it-works.html): How NovoCoupons verifies and delivers promo codes
+- [Coupon FAQ](https://novocoupons.comee.online/coupon-faq.html): Frequently asked questions about NovoCoupons promo codes
 
-## Trust & Verification
-- [About Us](https://novocoupons.com/about.html)
-- [Contact Support](https://novocoupons.com/contact.html)
-- [Privacy Policy](https://novocoupons.com/privacy.html)
-- [Terms of Service](https://novocoupons.com/terms.html)
-
-## Product Coupons
-Over 60 dedicated verified coupon pages available in the /products/ directory.
+## Popular Product Pages
+- [Fortnite 13500 V-Bucks Card](https://novocoupons.comee.online/products/fortnite-13500-vbucks-coupon): Verified Fortnite V-Bucks promo codes
+- [Roblox 10000 Robux Gift Card](https://novocoupons.comee.online/products/roblox-10000-robux-coupon): Verified Roblox Robux promo codes
+- [ChatGPT Plus Coupon](https://novocoupons.comee.online/products/chatgpt-plus-coupon): Verified ChatGPT Plus promo codes
+- [Valorant 5350 VP Digital Code](https://novocoupons.comee.online/products/valorant-5350-vp-coupon): Verified Valorant VP promo codes
+- [Genshin Impact 6480 Genesis Crystals](https://novocoupons.comee.online/products/genshin-impact-6480-crystals-coupon): Verified Genshin Impact promo codes
+- [League of Legends 11000 RP Card](https://novocoupons.comee.online/products/league-of-legends-11000-rp-coupon): Verified LoL RP promo codes

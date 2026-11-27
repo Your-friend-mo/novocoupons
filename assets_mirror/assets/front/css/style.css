@@ -2467,3 +2467,12 @@ body.modal-open {
 		padding-top: 12px !important;
 	}
 }
+/* NovoCoupons Navbar Overlap Fix - ensures fixed 64px header doesn't cover content */
+body {
+    padding-top: 76px !important;
+}
+@media (max-width: 575px) {
+    body {
+        padding-top: 70px !important;
+    }
+}
